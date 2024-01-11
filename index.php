@@ -1,48 +1,8 @@
 <?php
     require 'config.php';
+    require 'header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Luxe </title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/3010b1eaf1.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
-    <!-- header  -->
-    <header>
-        <!-- menu responsive -->
-        
-        <div class="menu_toggle">
-            <span></span>
-        </div>
 
-        <div class="logo">
-            <p><span>Luxe</span>Cars</p>
-        </div>
-        <ul class="menu">
-            <li><a href="#home">Acceuil</a></li>
-            <li><a href="#cars">Vehicules</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <?php
-            
-            if(!empty($_SESSION["id"])){
-                $id = $_SESSION["id"];
-                $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$id'");
-                $row = mysqli_fetch_assoc($result);
-                echo "<div>".$row["username"]."</div>";
-            }else{
-                echo"hello";
-                echo "<a href='login.php'><button class='login_btn'>LOGIN</button></a>";
-            }
-        ?>
-    </header>
     <!-- section Acceuil -->
      
     <section id="home">
@@ -55,72 +15,9 @@
             <img src="images/img1.png">
         </div>
     </section>
-
-
-
-
-    <!-- section vehicule -->
-
-    <section id="cars">
-        <h1 class="section_title">Nos vehicules</h1>
-        <div class="images">
-            <ul>
-                <li class="car">
-                   <div>
-                       <img src="images/car1.jpg" alt="">
-                   </div>
-                   <span>LAMBORGHINI</span>
-                   <span class="prix">300.000$</span>
-                   <a href="#">ACHETER MAINTENANT</a>
-                </li>
-                <li class="car">
-                    <div>
-                        <img src="images/car2.jpg" alt="">
-                    </div>
-                    <span>LAMBORGHINI</span>
-                    <span class="prix">300.000$</span>
-                    <a href="#">ACHETER MAINTENANT</a>
-                 </li>
-                 <li class="car">
-                    <div>
-                        <img src="images/car3.jpg" alt="">
-                    </div>
-                    <span>LAMBORGHINI</span>
-                    <span class="prix">300.000$</span>
-                    <a href="#">ACHETER MAINTENANT</a>
-                 </li>
-                 <li class="car">
-                    <div>
-                        <img src="images/car4.jpg" alt="">
-                    </div>
-                    <span>LAMBORGHINI</span>
-                    <span class="prix">300.000$</span>
-                    <a href="#">ACHETER MAINTENANT</a>
-                 </li>
-                 <li class="car">
-                    <div>
-                        <img src="images/car5.jpg" alt="">
-                    </div>
-                    <span>LAMBORGHINI</span>
-                    <span class="prix">300.000$</span>
-                    <a href="#">ACHETER MAINTENANT</a>
-                 </li>
-                 <li class="car">
-                    <div>
-                        <img src="images/car6.jpg" alt="">
-                    </div>
-                    <span>LAMBORGHINI</span>
-                    <span class="prix">300.000$</span>
-                    <a href="#">ACHETER MAINTENANT</a>
-                 </li>
-            </ul>
-        </div>
-    </section>
-
     <!-- section services -->
 
     <section id="services">
-        <h1 class="section_title">Nos Services</h1>
         <div class="list_services">
             <div class="service">
                 <i class="fa-solid fa-screwdriver-wrench"></i>
@@ -166,25 +63,6 @@
             </div>
         </div>
     </section>
- 
-
-    <footer>
-        <p>FaizDev YouTube Copyright 2022 </p>
-    </footer>
-
-    <script>
-        //menu responsive code JS
-
-        var menu_toggle = document.querySelector('.menu_toggle');
-        var menu = document.querySelector('.menu');
-        var menu_toggle_span = document.querySelector('.menu_toggle span');
-
-        menu_toggle.onclick = function(){
-            menu_toggle.classList.toggle('active');
-            menu_toggle_span.classList.toggle('active');
-            menu.classList.toggle('responsive') ;
-        }
-
-    </script>
-</body>
-</html>
+    <?php
+        require 'footer.php';
+    ?>
