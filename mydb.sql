@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2024 at 01:42 PM
+-- Generation Time: Jan 12, 2024 at 01:11 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -38,12 +38,12 @@ CREATE TABLE `cars` (
 --
 
 INSERT INTO `cars` (`id`, `name`, `price`) VALUES
-(1, 'car1', 100000),
-(2, 'car2', 20000),
-(3, 'car3', 47802000),
-(4, 'car4', 3000000),
-(5, 'car5', 780000),
-(6, 'car6', 8290000);
+(1, 'FERRARI Daytona', 140000),
+(2, ' FERRARI 296 GTB', 200000),
+(3, 'FERRARI 812', 470000),
+(4, 'FERRARI GTC4Lusso', 300000),
+(5, 'FERRARI Portofino', 780000),
+(6, ' FERRARI F8', 820000);
 
 -- --------------------------------------------------------
 
@@ -79,7 +79,10 @@ INSERT INTO `commandes` (`id`, `idCar`, `nameCar`, `price`, `idUser`, `current`)
 (37, 1, 'car1', 100000, 1, '2024-01-11 13:06:49'),
 (38, 2, 'car2', 20000, 1, '2024-01-11 13:07:13'),
 (39, 3, 'car3', 47802000, 1, '2024-01-11 13:07:44'),
-(40, 3, 'car3', 47802000, 1, '2024-01-11 13:08:40');
+(40, 3, 'car3', 47802000, 1, '2024-01-11 13:08:40'),
+(41, 1, 'car1', 100000, 1, '2024-01-12 12:00:24'),
+(42, 4, 'car4', 3000000, 1, '2024-01-12 12:00:24'),
+(44, 3, 'FERRARI 812', 470000, 1, '2024-01-12 12:49:08');
 
 -- --------------------------------------------------------
 
@@ -143,7 +146,7 @@ ALTER TABLE `cars`
 -- AUTO_INCREMENT for table `commandes`
 --
 ALTER TABLE `commandes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `users`

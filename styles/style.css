@@ -386,6 +386,7 @@ footer {
         display: none;
     }
     #home {
+        margin-top:50px;
         padding:  0 10px;
         justify-content: center;
         flex-direction: column;
@@ -400,10 +401,14 @@ footer {
         margin-top: 50px;
         width: 60%;
     }
+    .right img{
+        display:none;
+    }
     .images li {
         width: 100%;
     }
     #services {
+        margin-top:150px;
         padding: 0 10px;
     }
     .service {
@@ -575,8 +580,9 @@ table {
   
   
   
-  #table{
-    height:100vh;
+#table{
+    padding:100px 0;
+    min-height:100vh;
     display:flex;
     justify-content:space-between;
     align-items:center;
